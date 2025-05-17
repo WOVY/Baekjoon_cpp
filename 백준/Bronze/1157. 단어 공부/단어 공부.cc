@@ -3,11 +3,10 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include <algorithm>
 
 using namespace std;
 
-void count_word(vector<char> str) { //각 알파벳의 개수를 세는 함수
+void count_word(string str) {
     int max = 0;
     char answer;
 
@@ -33,16 +32,12 @@ int main() {
     string s;
     cin >> s;
 
-    //소문자를 대문자로 변경 후 vector에 저장
-    vector<char> str;
     for (int i = 0; i < s.size(); i++) {
         if (islower(s[i]))
-            str.push_back(s[i] - 32);
-        else
-            str.push_back(s[i]);
+            s[i] -= 32;
     }
 
-    count_word(str);
+    count_word(s);
 
     return 0;
 }
