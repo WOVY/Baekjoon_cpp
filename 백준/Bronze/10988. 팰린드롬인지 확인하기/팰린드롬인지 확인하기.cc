@@ -3,7 +3,7 @@
 
 using namespace std;
 
-bool check_Palindrome(string s) { //palindrome인지 확인하는 함수수
+bool check_Palindrome(string s) { //Palindrome인지 확인하는 함수
     int i = 0;
     bool flag = true;
     while (i < s.length() / 2) {
