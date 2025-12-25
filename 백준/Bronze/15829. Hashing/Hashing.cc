@@ -8,18 +8,22 @@ using namespace std;
 
 int main()
 {
-    int a, L, power = 1, result = 0;
+    int L;
+    long long power = 1, result = 0;
     string s;
     cin >> L;
     cin >> s;
 
     for (int i = 0; i < L; i++)
     {
+        // cout << s[i] - 96 << endl;
         result += (s[i] - 96) * power;
-        power *= r;
+        result = result % M;
+        // cout << result << endl;
+        power = (power * r) % M;
     }
 
-    cout << result % M << endl;
-    
+    cout << result << endl;
+
     return 0;
 }
